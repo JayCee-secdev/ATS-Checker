@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATS Resume Reviewer</title>
+    <style>
+      /* Basic embedded CSS - this will be improved later */
+      body {
+        font-family: sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+      .upload-box {
+        border: 2px dashed #ccc;
+        padding: 2rem;
+        text-align: center;
+        margin-top: 2rem;
+      }
+      button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ATS Resume Reviewer</h1>
+    <p>Upload your resume and a job description to see how well you match.</p>
+
+    <form action="/" method="POST" enctype="multipart/form-data">
+      <div class="upload-box">
+        <h3>1. Upload Resume</h3>
+        <input type="file" name="resume" accept=".pdf,.docx" required />
+
+        <h3>2. Job Description Text</h3>
+        <textarea
+          name="job_description"
+          rows="5"
+          style="width: 100%"
+          placeholder="Paste the job description here..."
+        ></textarea>
+
+        <br /><br />
+        <button type="submit">Analyze Resume</button>
+      </div>
+    </form>
+  </body>
+</html>
